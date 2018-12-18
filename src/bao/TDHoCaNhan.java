@@ -17,7 +17,7 @@ public class TDHoCaNhan extends TienDien{
     
     @Override
     long tinhTien() {
-        if(getSoLuong() <= 500){
+        if(getSoLuong() <= 100){
          return getSoLuong()*500;
         }
         return getSoLuong()*800;

@@ -17,7 +17,11 @@ public class TDToChuc extends TienDien{
 
     @Override
     long tinhTien() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(getSoLuong() <= kiemTraMuDo(mucDo)){
+            return getSoLuong()*400;
+        }else {
+            return getSoLuong()*1000;
+        }
     }
 
     public int getMucDo() {
@@ -28,5 +32,13 @@ public class TDToChuc extends TienDien{
         this.mucDo = mucDo;
     }
     
+    int kiemTraMuDo(int md){
+        switch(md){
+            case 1: return 1000;
+            case 2: return 2000;
+            case 3: return 5000;
+            default: return 0;
+        }
+    }
     
 }
